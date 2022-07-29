@@ -8,13 +8,9 @@ namespace tabuleiro
 {
     internal class Tabuleiro
     {
-        private int linhas;
-        private int colunas;
+        public int linhas { get; set; }
+        public int colunas { get; set; }
         private Peca[,] pecas;
-
-        public int Linha { get => linhas; set => linhas = value; }
-        public int Colunas { get => colunas; set => colunas = value; }
-        internal Peca[,] Pecas { get => pecas; set => pecas = value; }
 
         public Tabuleiro()
         {
@@ -23,9 +19,14 @@ namespace tabuleiro
 
         public Tabuleiro(int linhas, int colunas)
         {
-            Linha = linhas;
-            Colunas = colunas;
-            Pecas = new Peca[linhas, colunas];
+           this.linhas = linhas;
+           this.colunas = colunas;
+           pecas = new Peca[linhas, colunas];
+        }
+
+        public Peca peca(int linha, int coluna)
+        {
+            return pecas[linha, coluna];
         }
     }
 }
