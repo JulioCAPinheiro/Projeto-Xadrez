@@ -16,6 +16,13 @@ namespace tabuleiro
             this.linha = linha;
             this.coluna = coluna;
         }
+        
+        public void defirValores(int linha, int coluna)
+        {
+            this.linha = linha;
+            this.coluna = coluna;
+        }
+
 
         public override string ToString()
         {
